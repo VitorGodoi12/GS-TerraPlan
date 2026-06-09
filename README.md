@@ -72,9 +72,9 @@ npm run build
 
 ### 🔗 Links do Projeto
 
-- **GitHub:** https://github.com/SEU_USUARIO/terraplan *(atualizar)*
+- **GitHub:** https://github.com/VitorGodoi12/GS-TerraPlan
 - **Vídeo YouTube:** https://youtube.com/SEU_VIDEO *(atualizar)*
-- **Deploy Vercel:** https://terraplan.vercel.app *(atualizar)*
+- **Deploy Vercel:** https://gs-terra-plan.vercel.app
 
 ## 📞 Contato
 
