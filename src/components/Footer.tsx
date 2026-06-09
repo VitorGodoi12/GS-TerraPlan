@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 const pageLinks = [
   { to: '/', label: 'Home' },
   { to: '/sobre', label: 'Sobre' },
+  { to: '/solucao', label: 'Solucao' },
   { to: '/integrantes', label: 'Integrantes' },
   { to: '/faq', label: 'FAQ' },
   { to: '/contato', label: 'Contato' },
@@ -34,9 +35,8 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap gap-5 border-t border-tp-border pt-4">
-          <a href="#" className="text-[12px] text-tp-green-muted hover:text-tp-green-dim transition-colors">GitHub</a>
-          <a href="#" className="text-[12px] text-tp-green-muted hover:text-tp-green-dim transition-colors">Video</a>
-          <a href="#" className="text-[12px] text-tp-green-muted hover:text-tp-green-dim transition-colors">Vercel</a>
+          <a href="https://github.com/VitorGodoi12/GS-TerraPlan" className="text-[12px] text-tp-green-muted hover:text-tp-green-dim transition-colors">GitHub</a>
+          <a href="https://gs-terra-plan.vercel.app" className="text-[12px] text-tp-green-muted hover:text-tp-green-dim transition-colors">Vercel</a>
         </div>
       </div>
     </footer>

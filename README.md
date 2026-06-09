@@ -1,87 +1,112 @@
-# 🌱 TerraPlan – Gestão Agrícola Inteligente
+# TerraPlan - Gestao Agricola Inteligente
 
-## 📋 Descrição
+## Descricao
 
-O TerraPlan é uma plataforma web SPA que transforma dados climáticos de satélites em decisões práticas para pequenos e médios produtores rurais: **quando plantar**, **quanto irrigar** e **qual cultura tem mais chance de sucesso** — direto no celular.
+O TerraPlan e uma aplicacao web SPA voltada para pequenos e medios produtores rurais. A solucao usa dados climaticos e registros agricolas para apoiar decisoes sobre plantio, irrigacao, alertas climaticos e planejamento de safra.
 
-Conecta infraestrutura espacial (satélites meteorológicos) a um problema real na Terra (gestão agrícola), atendendo ao desafio oficial da FIAP Global Solution 2026.
+O projeto foi desenvolvido para a FIAP Global Solution 2026, conectando tecnologia, dados e sustentabilidade no contexto da agricultura.
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 | Tecnologia | Uso |
 |---|---|
-| React 18 | Framework UI principal |
-| Vite 5 | Build tool e dev server |
-| TypeScript 5 | Tipagem estática |
-| Tailwind CSS 3 | Estilização exclusiva / responsividade |
-| React Router DOM v6 | Rotas estáticas e dinâmicas (SPA) |
-| Tabler Icons | Biblioteca de ícones |
-| Google Fonts (Syne + DM Sans) | Tipografia |
-| Java · Quarkus | API REST back-end |
-| Python · Flask | API de modelos de IA |
+| React 19 | Biblioteca principal da interface |
+| Vite 8 | Build tool e servidor de desenvolvimento |
+| TypeScript 6 | Tipagem estatica do projeto |
+| Tailwind CSS 3 | Estilizacao e responsividade |
+| React Router DOM 7 | Rotas estaticas e dinamicas |
+| Tabler Icons | Icones da interface |
+| Java e Quarkus | API REST backend |
 | Oracle SQL | Banco de dados relacional |
-| Scikit-learn | Modelos de ML (classificação + regressão) |
-| OpenWeather API | Dados reais de satélites |
-| Vercel | Deploy e hospedagem |
+| OpenWeather API | Dados climaticos |
+| Vercel | Deploy do frontend |
+| Render | Deploy da API Java |
 
-## 🖥️ Páginas e Rotas
+## Paginas e Rotas
 
-| Rota | Tipo | Página |
+| Rota | Tipo | Pagina |
 |------|------|--------|
-| `/` | Estática | Home |
-| `/sobre` | Estática | Sobre o Projeto |
-| `/integrantes` | Estática | Integrantes |
-| `/faq` | Estática | FAQ |
-| `/contato` | Estática | Contato |
-| `/painel` | Estática | Painel do Produtor |
-| `/planejador/:cultura` | **Dinâmica** | Planejador de Safra (soja/milho/alface) |
+| `/` | Estatica | Home |
+| `/sobre` | Estatica | Sobre o Projeto |
+| `/solucao` | Estatica | Solucao |
+| `/integrantes` | Estatica | Integrantes |
+| `/faq` | Estatica | FAQ |
+| `/contato` | Estatica | Contato |
+| `/painel` | Estatica | Painel do Produtor |
+| `/planejador/:cultura` | Dinamica | Planejador de Safra |
 
-## 👥 Autores e Créditos
+## Integracao com API
+
+O frontend consome a API Java publicada no Render por meio da variavel de ambiente:
+
+```env
+VITE_API_URL=https://gs-terraplan-api-qxk3.onrender.com
+```
+
+Principais endpoints consumidos:
+
+| Metodo | Endpoint | Uso |
+|---|---|---|
+| GET | `/propriedade` | Lista propriedades cadastradas |
+| GET | `/clima/propriedade/:id` | Consulta clima por propriedade |
+| GET | `/telemetria` | Lista leituras meteorologicas |
+| GET | `/irrigacao` | Lista registros de irrigacao |
+| GET | `/alerta` | Lista alertas climaticos |
+| GET | `/plantio` | Lista plantios |
+
+## Autores e Creditos
 
 | Nome | RM | Turma | GitHub | LinkedIn |
 |------|----|-------|--------|----------|
-| Felipe Cuesta Puerta de Oliveira | 567703 | 1TDSA · 2026 | [GitHub](https://github.com/) | [LinkedIn](https://linkedin.com/in/) |
-| Vitor Costa de Godoi | 568448 | 1TDSA · 2026 | [GitHub](https://github.com/) | [LinkedIn](https://linkedin.com/in/) |
-| Vitor Santos Domingues | 568375 | 1TDSA · 2026 | [GitHub](https://github.com/) | [LinkedIn](https://linkedin.com/in/) |
-| João Victor De Souza Braz | 566862 | 1TDSA · 2026 | [GitHub](https://github.com/) | [LinkedIn](https://linkedin.com/in/) |
+| Felipe Cuesta Puerta de Oliveira | 567703 | 1TDSPR - 2026 | [GitHub](https://github.com/felipecuesta06) | [LinkedIn](https://www.linkedin.com/in/felipe-cuesta-20a813319) |
+| Vitor Costa de Godoi | 568448 | 1TDSPR - 2026 | [GitHub](https://github.com/VitorGodoi12) | [LinkedIn](https://www.linkedin.com/in/vitor-godoi-189b91380) |
+| Vitor Santos Domingues | 568375 | 1TDSPR - 2026 | [GitHub](https://github.com/VitorSantosDomingues) | [LinkedIn](https://www.linkedin.com/in/vitor-santos-domingues-87b573275/) |
+| Joao Victor De Souza Braz | 566862 | 1TDSPR - 2026 | [GitHub](https://github.com/souzabrazj) | [LinkedIn](https://www.linkedin.com/in/souzabrazj?utm_source=share_via&utm_content=profile&utm_medium=member_android) |
 
-## 🖼️ Imagens e Ícones
+## Estrutura de Pastas
 
-- **Identidade visual:** paleta verde escuro (`#4ade80` principal) sobre fundo `#0a1a12`
-- **Tipografia:** Syne (títulos/destaques) + DM Sans (corpo de texto)
-- **Ícones:** [Tabler Icons](https://tabler-icons.io/) via webfont CDN
-- **Favicon:** SVG personalizado TerraPlan
+```text
+src/
+  components/   Componentes reutilizaveis da interface
+  constants/    Rotas, endpoints e classes de status
+  data/         Dados locais de apoio para paginas informativas
+  hooks/        Hooks reutilizaveis
+  pages/        Paginas principais da aplicacao
+  services/     Cliente HTTP e servicos da API
+  types/        Interfaces e tipos TypeScript
+```
 
-## ⚙️ Como Usar
+## Como Usar
 
 ```bash
-# 1. Clone o repositório
-git clone https://github.com/SEU_USUARIO/terraplan.git
-cd terraplan
+# 1. Clone o repositorio
+git clone https://github.com/VitorGodoi12/GS-TerraPlan.git
+cd GS-TerraPlan
 
-# 2. Instale as dependências
+# 2. Instale as dependencias
 npm install
 
 # 3. Rode em desenvolvimento
 npm run dev
-# Acesse http://localhost:5173
 
-# 4. Build para produção
+# 4. Gere o build de producao
 npm run build
 ```
 
-### 🔗 Links do Projeto
+## Links do Projeto
 
-- **GitHub:** https://github.com/VitorGodoi12/GS-TerraPlan
-- **Vídeo YouTube:** https://youtube.com/SEU_VIDEO *(atualizar)*
-- **Deploy Vercel:** https://gs-terra-plan.vercel.app
+- GitHub: https://github.com/VitorGodoi12/GS-TerraPlan
+- API Backend: https://github.com/VitorGodoi12/GS-TerraPlan-Api
+- Deploy Vercel: https://gs-terra-plan.vercel.app
+- Deploy API Render: https://gs-terraplan-api-qxk3.onrender.com
+- Video YouTube: pendente de envio pela equipe
 
-## 📞 Contato
+## Contato
 
-- **E-mail:** terraplan@fiap.com.br
-- **Instituição:** FIAP · 1TDS Agosto · São Paulo, SP
+- E-mail: terraplan@fiap.com.br
+- Instituicao: FIAP - 1TDSPR - Global Solution 2026
 
-## 🌍 ODS Atendidos
+## ODS Atendidos
 
-- **ODS 2** – Fome Zero e Agricultura Sustentável
-- **ODS 13** – Ação contra a Mudança do Clima
+- ODS 2 - Fome Zero e Agricultura Sustentavel
+- ODS 13 - Acao contra a Mudanca Global do Clima

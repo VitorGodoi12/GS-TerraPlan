@@ -47,8 +47,8 @@ export const INTEGRANTES: Membro[] = [
     rm: '566862',
     turma: '1TDSPR · 2026',
     email: 'rm566862@fiap.com.br',
-    github: 'https://github.com/',
-    linkedin: 'https://linkedin.com/in/',
+    github: 'https://github.com/souzabrazj',
+    linkedin: 'https://www.linkedin.com/in/souzabrazj?utm_source=share_via&utm_content=profile&utm_medium=member_android',
   },
 ]
 

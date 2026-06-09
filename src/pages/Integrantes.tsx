@@ -9,7 +9,7 @@ const INTEGRANTES: Membro[] = [
     name: 'Felipe Cuesta Puerta de Oliveira',
     role: 'Desenvolvedor Full Stack',
     rm: '567703',
-    turma: '1TDSPR · 2026',
+    turma: '1TDSPR - 2026',
     email: 'rm567703@fiap.com.br',
     github: 'https://github.com/felipecuesta06',
     linkedin: 'https://www.linkedin.com/in/felipe-cuesta-20a813319',
@@ -19,7 +19,7 @@ const INTEGRANTES: Membro[] = [
     name: 'Vitor Costa de Godoi',
     role: 'Desenvolvedor Full Stack',
     rm: '568448',
-    turma: '1TDSPR · 2026',
+    turma: '1TDSPR - 2026',
     email: 'rm568448@fiap.com.br',
     github: 'https://github.com/VitorGodoi12',
     linkedin: 'https://www.linkedin.com/in/vitor-godoi-189b91380',
@@ -29,17 +29,17 @@ const INTEGRANTES: Membro[] = [
     name: 'Vitor Santos Domingues',
     role: 'Desenvolvedor Full Stack',
     rm: '568375',
-    turma: '1TDSPR · 2026',
+    turma: '1TDSPR - 2026',
     email: 'rm568375@fiap.com.br',
     github: 'https://github.com/VitorSantosDomingues',
     linkedin: 'https://www.linkedin.com/in/vitor-santos-domingues-87b573275/',
   },
   {
     initials: 'JV',
-    name: 'João Victor De Souza Braz',
+    name: 'Joao Victor De Souza Braz',
     role: 'Desenvolvedor Full Stack',
     rm: '566862',
-    turma: '1TDSPR · 2026',
+    turma: '1TDSPR - 2026',
     email: 'rm566862@fiap.com.br',
     github: 'https://github.com/souzabrazj',
     linkedin: 'https://www.linkedin.com/in/souzabrazj?utm_source=share_via&utm_content=profile&utm_medium=member_android',
@@ -55,7 +55,7 @@ export default function Integrantes() {
           Quem construiu o <span className="text-tp-green">TerraPlan</span>
         </h1>
         <p className="text-sm text-tp-green-dim">
-          Alunos de Análise e Desenvolvimento de Sistemas - FIAP · Turma 1TDS · Global Solution 2026
+          Alunos de Analise e Desenvolvimento de Sistemas - FIAP - Turma 1TDS - Global Solution 2026
         </p>
 
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -65,7 +65,7 @@ export default function Integrantes() {
                 {member.initials}
               </div>
               <span className="bg-tp-border-dim border border-tp-border-bright rounded-full px-2.5 py-0.5 text-[11px] text-tp-green mb-2">
-                1TDS · Agosto
+                1TDS - Agosto
               </span>
               <div className="font-syne font-bold text-[14px] text-tp-text-primary mb-1 leading-snug">{member.name}</div>
               <div className="text-[12px] text-tp-green-dim mb-3">{member.role}</div>

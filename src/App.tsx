@@ -8,6 +8,7 @@ import FAQPageRoute from './pages/FAQPageRoute'
 import ContatoPage from './pages/ContatoPage'
 import Painel from './pages/Painel'
 import Planejador from './pages/Planejador'
+import SolucaoPage from './pages/SolucaoPage'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
             <Route path="/integrantes" element={<Integrantes />} />
             <Route path="/faq" element={<FAQPageRoute />} />
             <Route path="/contato" element={<ContatoPage />} />
+            <Route path="/solucao" element={<SolucaoPage />} />
             <Route path="/painel" element={<Painel />} />
             <Route path="/planejador" element={<Navigate to="/planejador/soja" replace />} />
             <Route path="/planejador/:cultura" element={<Planejador />} />
