@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: gs-terraplan-api
+    runtime: docker
+    rootDir: backend
+    plan: free
+    envVars:
+      - key: DB_URL
+        value: jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: OPENWEATHER_API_KEY
+        sync: false
