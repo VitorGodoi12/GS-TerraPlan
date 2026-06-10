@@ -96,10 +96,8 @@ npm run build
 ## Links do Projeto
 
 - GitHub: https://github.com/VitorGodoi12/GS-TerraPlan
-- API Backend: https://github.com/VitorGodoi12/GS-TerraPlan-Api
 - Deploy Vercel: https://gs-terra-plan.vercel.app
-- Deploy API Render: https://gs-terraplan-api-qxk3.onrender.com
-- Video YouTube: pendente de envio pela equipe
+- Video YouTube: https://youtu.be/8wH3PrfrdPo
 
 ## Contato
 
