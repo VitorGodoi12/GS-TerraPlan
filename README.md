@@ -97,7 +97,7 @@ npm run build
 
 - GitHub: https://github.com/VitorGodoi12/GS-TerraPlan
 - Deploy Vercel: https://gs-terra-plan.vercel.app
-- Video YouTube: https://youtu.be/8wH3PrfrdPo
+- Video YouTube: https://youtu.be/0yWcV0KaJoA
 
 ## Contato
 
